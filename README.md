@@ -238,7 +238,7 @@ events too.
 
 ```mermaid
 flowchart TD
-    A["Request: GET/PUT/DELETE /tasks/{id}"] --> B{"Task exists?"}
+    A["Sending a Request (eg: PUT/GET)"] --> B{"Task exists?"}
     B -- No --> D["404 Not Found"]
     B -- Yes --> C{"current_user.role == admin\nOR task.owner_id == current_user.id?"}
     C -- No --> D
