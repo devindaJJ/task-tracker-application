@@ -191,18 +191,18 @@ sequenceDiagram
     participant API as FastAPI
 
     User->>FE: Enter email + password
-    FE->>API: POST /api/v1/auth/login
+    FE->>API: Gte the authentication
     API-->>FE: { access_token, refresh_token }
     FE->>FE: Store both tokens (localStorage)
 
     Note over FE,API: ...time passes, access token expires...
 
-    FE->>API: GET /api/v1/tasks (expired access token)
+    FE->>API: Get the expired access token 
     API-->>FE: 401 Unauthorized
-    FE->>API: POST /api/v1/auth/refresh (refresh_token)
+    FE->>API: refresh_token
     API-->>FE: new { access_token, refresh_token }
     FE->>FE: Store new tokens
-    FE->>API: Retry GET /api/v1/tasks (new access token)
+    FE->>API: Retry to get a nec access token
     API-->>FE: 200 OK + tasks
 ```
 
@@ -219,7 +219,7 @@ sequenceDiagram
     participant API as FastAPI
     participant WS as WebSocket Manager
 
-    Alice->>API: PUT /api/v1/tasks/{id} (status: done)
+    Alice->>API: Update the status
     API->>API: Update row in Postgres
     API->>WS: broadcast_task_event("task_updated", task)
     WS-->>Alice: { event: "task_updated", data: {...} }  (own connection)
