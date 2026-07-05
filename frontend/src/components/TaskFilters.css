@@ -1,0 +1,32 @@
+.task-filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.task-filters-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-filters-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+}
+
+.task-filters-group select {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  min-width: 160px;
+}
+
+.task-filters-group select:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}

@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pagination-summary {
+  font-size: 13px;
+  color: var(--color-ink-soft);
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-controls .btn {
+  padding: 7px 14px;
+  font-size: 13px;
+}

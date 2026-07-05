@@ -1,0 +1,24 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-badge-todo {
+  background: var(--color-status-todo-bg);
+  color: var(--color-status-todo);
+}
+
+.status-badge-in_progress {
+  background: var(--color-status-progress-bg);
+  color: var(--color-status-progress);
+}
+
+.status-badge-done {
+  background: var(--color-status-done-bg);
+  color: var(--color-status-done);
+}
