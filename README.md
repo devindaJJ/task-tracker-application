@@ -6,12 +6,6 @@ Focused) take-home assignment.
 
 **Stack:** FastAPI (Python) · React + TypeScript · PostgreSQL · WebSockets
 
-> **Diagram note:** every diagram below is written in [Mermaid](https://mermaid.js.org/)
-> and renders automatically in GitHub's file viewer — no separate image
-> files to keep in sync. If you're reading this somewhere that doesn't
-> render Mermaid (e.g. a plain text editor), paste the code blocks into
-> https://mermaid.live to view them.
-
 ---
 
 ## Contents
